@@ -74,7 +74,7 @@ class TaskController extends Controller
     public function updateStatus(Request $request, $id)
     {
         //validate request
-        //try {
+        try {
 
             $request->validate([
                 'status' => 'required|in:pending,in_progress,completed'
@@ -87,20 +87,20 @@ class TaskController extends Controller
                 'message' => 'Task status updated successfully.',
                 'data' => $task
             ], 200);
-        //} catch (\Illuminate\Validation\ValidationException $e) {
+        } catch (\Illuminate\Validation\ValidationException $e) {
 
-        //    return response()->json([
-        //        'success' => false,
-        //        'message' => 'Validation failed.',
-        //        'errors' => $e->errors()
-        //    ], 422);
-        //} catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Validation failed.',
+                'errors' => $e->errors()
+            ], 422);
+        } catch (\Exception $e) {
 
-        //    return response()->json([
-        //        'success' => false,
-        //        'message' => 'Failed to update task status.',
-        //        'error' => $e->getMessage()
-        //    ], 500);
-        //}
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to update task status.',
+                'error' => $e->getMessage()
+            ], 500);
+        }
     }
 }
