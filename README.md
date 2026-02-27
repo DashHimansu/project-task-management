@@ -85,10 +85,11 @@ It’s built using **Laravel Breeze** for authentication, **Eloquent relationshi
 ### 1. Clone and Install
 
 ```bash
-git clone https://github.com/yourusername/project-task-management.git
+git clone https://github.com/DashHimansu/project-task-management.git
 cd project-task-management
 composer install
 npm install && npm run dev
+
 2. Setup Environment
 cp .env.example .env
 php artisan key:generate

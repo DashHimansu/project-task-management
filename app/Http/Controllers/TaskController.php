@@ -107,7 +107,7 @@ class TaskController extends Controller
     public function destroy(Task $task)
     {
         $task->delete(); // soft delete
-    return back()->with('success', 'Task deleted successfully!');
+        return back()->with('success', 'Task deleted successfully!');
     }
     public function export()
     {

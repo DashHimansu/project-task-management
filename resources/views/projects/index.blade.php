@@ -12,6 +12,7 @@
     <table border="1" style="width: 100%; border-collapse: collapse; text-align: center;">
         <tr style="background-color: #f2f2f2;">
             <th style="padding: 10px;">Name</th>
+            <th style="padding: 10px;">Description</th>
             <th style="padding: 10px;">Task Count</th>
             <th style="padding: 10px;">Action</th>
         </tr>
@@ -19,6 +20,7 @@
         @foreach($projects as $project)
         <tr>
             <td style="padding: 10px;">{{ $project->name }}</td>
+            <td style="padding: 10px;">{{ $project->description??"N/A" }}</td>
             <td style="padding: 10px;">{{ $project->tasks_count }}</td>
             <td style="padding: 10px;">
                 <a href="{{ route('projects.edit',$project) }}" 

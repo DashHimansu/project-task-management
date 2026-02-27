@@ -16,6 +16,14 @@
                    required
                    style="width: 100%; padding: 8px;">
         </div>
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px;">Project Description</label>
+            <input type="text" 
+                   name="description" 
+                   value="{{ $project->description }}" 
+                   required
+                   style="width: 100%; padding: 8px;">
+        </div>
 
         <div style="margin-bottom: 15px;">
             <label style="display: block; margin-bottom: 5px;">Start Date</label>
