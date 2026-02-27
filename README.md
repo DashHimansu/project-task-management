@@ -116,9 +116,9 @@ Soft deletes are enabled for tasks, so nothing is ever truly lost unless you rea
 
 Web Routes
 
-Projects: /projects → list, create, edit, delete
+Projects: /projects for (list) → , /create, /edit, /delete
 
-Tasks: /tasks → list, create, edit, soft delete
+Tasks: /tasks for (list) → /create, /edit, /soft delete
 
 Export Tasks: /tasks/export → download Excel
 
