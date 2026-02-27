@@ -29,6 +29,7 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        // Its a simple validation but We can apply form validation but i just keep it as simple
         $request->validate([
             'name' => 'required|max:255',
             'start_date' => 'required|date',

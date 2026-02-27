@@ -74,6 +74,7 @@ class TaskController extends Controller
     public function updateStatus(Request $request, $id)
     {
         //validate request
+        // We can apply form validation but i just keep it as simple
         try {
 
             $request->validate([
